@@ -10,12 +10,17 @@
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Watch downloaded movies without restrictions</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="button primary-btn btn-lg px-4 gap-3">
+            <button
+                type="button"
+                class="button primary-btn btn-lg px-4 gap-3"
+                (click)="util.navigate('/login')"
+            >
                 Login
             </button>
             <button
                 type="button"
                 class="button primary-btn-outline btn-lg px-4"
+                (click)="util.navigate('/register')"
             >
                 Register
             </button>

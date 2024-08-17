@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UtilService } from '../../shared/services/util.service';
 
 @Component({
     selector: 'app-landing-page',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
     templateUrl: './landing-page.component.html',
     styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent {}
+export class LandingPageComponent {
+    public util = inject(UtilService);
+}

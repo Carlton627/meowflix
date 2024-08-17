@@ -19,7 +19,6 @@ export class HomePageComponent implements OnInit {
         this.streaming.getMovies().subscribe((response: MovieResponse) => {
             this.movies = response.data as Movie[];
         });
-        this.streaming.getMovieById('').subscribe(console.log);
     }
 
     viewMovie(movieId: string) {

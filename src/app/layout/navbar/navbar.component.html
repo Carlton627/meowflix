@@ -1,6 +1,6 @@
 <nav class="navbar bg-dark navigation">
     <div class="nav-content">
-        <div class="navbar-brand" (click)="navigate('/')">
+        <div class="navbar-brand" (click)="util.navigate('/')">
             <img
                 src="../../../assets/meowflix_logo.png"
                 alt=""
@@ -13,13 +13,16 @@
             <div class="nav-item">
                 <button
                     class="button primary-btn-outline"
-                    (click)="navigate('/register')"
+                    (click)="util.navigate('/register')"
                 >
                     Register
                 </button>
             </div>
             <div class="nav-item">
-                <button class="button primary-btn" (click)="navigate('/login')">
+                <button
+                    class="button primary-btn"
+                    (click)="util.navigate('/login')"
+                >
                     Login
                 </button>
             </div>
