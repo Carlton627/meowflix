@@ -1,0 +1,15 @@
+@if (movie) {
+
+<section class="watch">
+    <h3 class="title">{{ movie.title }}</h3>
+    <div class="author">Uploaded By: {{ movie.uploadedBy }}</div>
+    <video class="video-viewer" controls width="600" controls autoplay>
+        <source [src]="movie.url" type="video/mp4" />
+    </video>
+</section>
+
+} @else {
+
+<div>Loading..</div>
+
+}

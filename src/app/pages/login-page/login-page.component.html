@@ -1,0 +1,36 @@
+<section class="login-section">
+    <div class="message">
+        <h2>Login to Meowflix</h2>
+        <p>Welcome back, purrr....</p>
+    </div>
+
+    <form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="username"
+                formControlName="username"
+                placeholder="Enter your user name"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+                id="password"
+                placeholder="Hope no one's looking"
+            />
+        </div>
+        <button
+            type="submit"
+            [disabled]="loginForm.invalid"
+            class="button primary-btn"
+        >
+            Login
+        </button>
+    </form>
+</section>

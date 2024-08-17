@@ -1,0 +1,38 @@
+<nav class="navbar bg-dark navigation">
+    <div class="nav-content">
+        <div class="navbar-brand" (click)="navigate('/')">
+            <img
+                src="../../../assets/meowflix_logo.png"
+                alt=""
+                width="60"
+                height="60"
+            />
+        </div>
+        <div class="nav-options">
+            @if (!user) {
+            <div class="nav-item">
+                <button
+                    class="button primary-btn-outline"
+                    (click)="navigate('/register')"
+                >
+                    Register
+                </button>
+            </div>
+            <div class="nav-item">
+                <button class="button primary-btn" (click)="navigate('/login')">
+                    Login
+                </button>
+            </div>
+            } @else {
+            <div class="nav-item">
+                <div class="user-label">Hi {{ this.user.username }}</div>
+            </div>
+            <div class="nav-item">
+                <button class="button primary-btn" (click)="logout()">
+                    Logout
+                </button>
+            </div>
+            }
+        </div>
+    </div>
+</nav>

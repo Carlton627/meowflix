@@ -1,0 +1,19 @@
+<section class="movies" data-bs-theme="dark">
+    <h3 class="collection-title">Movies For You</h3>
+    <div class="movies-list">
+        @for(movie of movies; track movie._id) {
+        <div class="card" (click)="viewMovie(movie._id)">
+            <!-- <img src="..." class="card-img-top" alt="..." /> -->
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+        } @empty {
+        <p>No movies present</p>
+        }
+    </div>
+</section>

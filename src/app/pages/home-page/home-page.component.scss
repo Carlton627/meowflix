@@ -1,0 +1,18 @@
+.movies {
+    padding: 2rem;
+    background-color: var(--app-bg-color);
+    color: var(--app-text-color);
+
+    .collection-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        // color: white;
+    }
+    .movies-list {
+        display: flex;
+        justify-content: space-evenly;
+        .card {
+            width: 20rem;
+        }
+    }
+}

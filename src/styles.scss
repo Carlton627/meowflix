@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --app-bg-color: #212529;
+    --app-primary-color: #f89fe2;
+    --app-secondary-color: #2c3035;
+    --app-text-color: #ffffff;
+    //   --app-border-radius: 0.25rem;
+}
+
+$app-bg-color: var(--app-bg-color);
+$app-primary-color: var(--app-primary-color);
+$app-secondary-color: var(--app-secondary-color);
+$app-text-color: var(--app-text-color);
+// $app-border-radius: var(--app-border-radius);
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #212529;
+}
+
+.button {
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.primary-btn {
+    background-color: $app-primary-color; /* Override Bootstrap primary button */
+    border-color: $app-primary-color;
+    color: $app-secondary-color;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #ff78dd; /* Primary button hover effect */
+    border-color: #ff78dd;
+}
+
+.primary-btn-outline {
+    color: $app-primary-color; /* Custom text color */
+    border: 1px solid $app-primary-color;
+    border-color: $app-primary-color; /* Custom border color */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-btn-outline:hover {
+    color: #2c3035; /* Change text color on hover */
+    background-color: $app-primary-color; /* Change background color on hover */
+}
+
+.icon-btn {
+    color: $app-primary-color;
+}

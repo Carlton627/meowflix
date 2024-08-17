@@ -1,0 +1,29 @@
+.watch {
+    padding: 1rem 2rem;
+    background-color: var(--app-bg-color);
+    color: var(--app-text-color);
+
+    // centering the video for now
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    // .title {
+    //     margin-bottom: 1rem;
+    // }
+
+    .author {
+        margin-bottom: 1rem;
+    }
+
+    .video-viewer {
+        width: 65%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+div {
+    background-color: var(--app-bg-color);
+    color: var(--app-text-color);
+}
