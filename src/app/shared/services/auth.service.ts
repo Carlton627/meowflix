@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
     providedIn: 'root',
 })
 export class AuthService {
-    apiUrl = 'http://localhost:3000/api/v1/users';
+    // apiUrl = 'http://localhost:3000/api/v1/users';
+    apiUrl = 'https://meowflix-api.onrender.com/api/v1/users';
 
     private router = inject(Router);
     private http = inject(HttpClient);

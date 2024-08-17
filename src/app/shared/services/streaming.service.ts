@@ -7,7 +7,8 @@ import { MovieResponse } from '../models/movie.model';
     providedIn: 'root',
 })
 export class StreamingService {
-    apiUrl = 'http://localhost:3000/api/v1/movies';
+    // apiUrl = 'http://localhost:3000/api/v1/movies';
+    apiUrl = 'https://meowflix-api.onrender.com/api/v1/movies';
 
     private http = inject(HttpClient);
 
