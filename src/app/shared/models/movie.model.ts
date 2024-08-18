@@ -2,6 +2,7 @@ export interface Movie {
     title: string;
     url: string;
     uploadedBy: string;
+    description?: string;
     _id: string;
 }
 
