@@ -10,9 +10,17 @@
     }
     .movies-list {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .col-md-4 {
+            display: flex; // Added to center content inside each column
+            justify-content: center; // Centers card inside column
+            margin-bottom: 1rem; // Adjust margin as needed
+        }
+
         .card {
-            width: 20rem;
+            width: 25rem;
             cursor: pointer;
         }
     }
