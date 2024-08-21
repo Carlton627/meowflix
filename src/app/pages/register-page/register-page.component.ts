@@ -8,6 +8,7 @@ import {
 import { AuthService } from '../../shared/services/auth.service';
 import { User } from '../../shared/models/user.model';
 import { Router } from '@angular/router';
+import { ToastService } from '../../shared/services/toast.service';
 
 @Component({
     selector: 'app-register-page',
@@ -20,6 +21,7 @@ export class RegisterPageComponent {
     private fb = inject(FormBuilder);
     private auth = inject(AuthService);
     private router = inject(Router);
+    private toast = inject(ToastService);
 
     registerForm!: FormGroup;
 
@@ -39,10 +41,12 @@ export class RegisterPageComponent {
         this.auth.register(user).subscribe({
             next: response => {
                 this.auth.setUser(response.data);
+                this.toast.showToast('Welcome to Meowflix 😺', 'success');
                 this.router.navigate(['/home']);
             },
             error: () => {
-                this.errorMessage = 'Something went wrong :(';
+                this.errorMessage = 'Something went wrong :(, Please Try Again';
+                this.toast.showToast(this.errorMessage, 'error');
             },
         });
     }

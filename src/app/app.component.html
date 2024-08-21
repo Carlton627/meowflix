@@ -1,2 +1,7 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+<app-toast
+    *ngIf="toast.toast$ | async as toast"
+    [type]="toast.type"
+    [message]="toast.message"
+></app-toast>

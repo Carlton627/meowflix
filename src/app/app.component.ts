@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
+import { ToastService } from './shared/services/toast.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, NavbarComponent, HomePageComponent],
+    imports: [RouterOutlet, NavbarComponent, ToastComponent, CommonModule],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+    public toast = inject(ToastService);
+}

@@ -1,0 +1,68 @@
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.toast {
+    background-color: #343a40; /* Dark background */
+    color: white;
+    border-radius: 5px;
+    padding: 0;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: block;
+}
+
+.toast-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #212529; /* Darker background for header */
+    color: white;
+}
+
+.icon-square {
+    width: 20px;
+    height: 20px;
+    background-color: red; /* Bootstrap primary color */
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.toast-body {
+    padding: 15px;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.icon-error {
+    background-color: #dc3545; /* Red for errors */
+}
+
+.icon-success {
+    background-color: #28a745; /* Green for success */
+}
+
+.icon-info {
+    background-color: #17a2b8; /* Blue for info */
+}
+
+.icon-warning {
+    background-color: #ffc107; /* Yellow for warnings */
+}
