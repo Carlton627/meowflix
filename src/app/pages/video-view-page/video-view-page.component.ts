@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StreamingService } from '../../shared/services/streaming.service';
 import { Movie, MovieResponse } from '../../shared/models/movie.model';
+import { ToastService } from '../../shared/services/toast.service';
 
 @Component({
     selector: 'app-video-view-page',
@@ -13,6 +14,8 @@ import { Movie, MovieResponse } from '../../shared/models/movie.model';
 export class VideoViewPageComponent implements OnInit {
     private activatedRoute = inject(ActivatedRoute);
     private streaming = inject(StreamingService);
+    private toast = inject(ToastService);
+
     movie!: Movie;
     movieId!: string;
 
@@ -23,10 +26,13 @@ export class VideoViewPageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.streaming
-            .getMovieById(this.movieId)
-            .subscribe((response: MovieResponse) => {
-                this.movie = response.data as Movie;
-            });
+        this.streaming.getMovieById(this.movieId).subscribe({
+            next: response => (this.movie = response.data as Movie),
+            error: () =>
+                this.toast.showToast(
+                    'Unable to fetch movie, Please contact the developer',
+                    'error'
+                ),
+        });
     }
 }
